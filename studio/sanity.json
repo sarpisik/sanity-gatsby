@@ -1,12 +1,12 @@
 {
   "root": true,
   "api": {
-    "projectId": "7j9cnsfo",
+    "projectId": "defn7ovb",
     "dataset": "production"
   },
   "project": {
     "name": "Gatsby Demo",
-    "basePath": "/"
+    "basePath": "/studio"
   },
   "plugins": [
     "@sanity/base",
@@ -26,4 +26,3 @@
     }
   ]
 }
-

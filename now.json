@@ -1,24 +1,31 @@
 {
   "version": 2,
-  "name": "example-company-website-gatsby-sanity-combo",
+  "name": "example-company-website-gatsby-sanity-combo-sarpisik",
   "builds": [
     {
       "src": "web/package.json",
       "use": "@now/static-build",
-      "config": { "distDir": "public" }
+      "config": {
+        "distDir": "public",
+        "env": {
+          "SANITY_PROJECT_ID": "@sanity-project",
+          "SANITY_DATASET": "@sanity-dataset"
+        }
+      }
     },
     {
       "src": "studio/package.json",
       "use": "@now/static-build",
-      "config":  { "distDir": "dist" }
+      "config": { "distDir": "dist" }
     }
   ],
   "routes": [
     { "src": "^/studio/static/(.*)", "dest": "/studio/static/$1" },
     { "src": "^/studio/(.*)", "dest": "/studio/index.html" },
     {
-      "src": "/(.*)", "dest": "/web/$1"
+      "src": "/(.*)",
+      "dest": "/web/$1"
     }
   ],
-  "alias": ["example-company-website-gatsby-sanity-combo.now.sh"]
+  "alias": ["example-company-website-gatsby-sanity-combo-sarpisik.now.sh"]
 }
